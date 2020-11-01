@@ -1,0 +1,195 @@
+*{
+	text-decoration: none;
+	vertical-align:middle;
+}
+header a:link,header a:visited{
+	color: #222;
+}
+header a:hover{
+	color: blue;
+}
+footer a:link,footer a:visited{
+	color:#9195a3;;
+}
+footer a:hover{
+	color: black;
+}
+body{
+	/*border:2px solid black;*/
+		height:700px;}
+header{
+	/*border: 1px solid red;*/
+	padding-top: 10px;
+	height: 40px;
+	/*border:1px solid red;*/
+}
+#top-left{
+	margin-top: 8px;
+	float: left;
+	font: 13px/23px Arial,sans-errif;
+}
+#top-left>a{
+	padding-left: 16px; 
+	padding-right: 11.5px;
+}
+#top-right{
+	margin-top: 1px;
+	padding-top: 0px;
+	/*border:1px solid red;*/
+	float: right;
+	font-size: 13px;
+	padding-right: 20px;
+}
+#dropdown1{
+	width: 80px;
+	display: inline-block;
+	position: relative;
+	/*border:1px solid red;*/
+	text-align: center;
+}
+#dropdown1:hover span{
+	color: blue;
+}
+#dropdown1 button{
+	border:0;
+	background-color: white;
+	/*text-align: center;*/
+}
+#dropdown1 button:hover{
+	color: blue;
+}
+#dropdown1-content{
+	display: none;
+	position: absolute;
+	margin-top:10px;
+	vertical-align: top;
+	text-align: center;
+	width: 84px;
+	width: 84px;
+	border:1px solid #fbfbfb;
+	box-shadow: 0 0 10px #c4c7ce;
+	border-radius: 10%;
+	text-decoration: none;  
+}
+#dropdown1-content button{
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+hr{
+	width: 51px;
+	background-color: #fbfbfb;
+}
+#dropdown1:hover #dropdown1-content{
+	display: block;
+}
+#top-right img{
+	text-align: middle;
+	width: 23px;
+}
+#top-right>a{
+	margin-left:32px;
+}
+#top-right #span1{
+	background: blue;
+	text-align: center;
+	color: white;
+	font-size: 13px;
+}
+#span2 img{
+	padding:2px;
+	width:24px;
+	height: 24px;
+	border:1px solid blue;
+	border-radius: 50%;
+}
+
+
+section{
+	/*border: 1px solid red;*/
+	/*border:1px solid red;*/
+	height: 500px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+#icon{
+	text-align: center;
+}
+#icon img{
+	width: 275px;
+}
+#search{
+	position: relative;
+	height: 100px;
+	margin-top: 10px;
+	/*border:1px solid red;*/
+}
+#search #span1{
+	/*background-position: 0 -20px;*/
+	/*float: left;*/
+	position: absolute;
+	top:10px;
+	left: 830px;
+	/*border:1px solid red;*/
+	/*padding-left: 25px;*/
+	/*margin-left: 30px;*/
+	opacity: ;
+	width:24px;
+	height: 20px;
+	background: url(capture_icon.png) 0 47px;
+}
+#search #span1:hover{
+	position: absolute;
+	top:10px;
+	left: 830px;
+	/*border:1px solid red;*/
+	/*padding-left: 25px;*/
+	/*margin-left: 30px;*/
+	opacity: ;
+	width:24px;
+	height: 20px;
+	background: url(capture_icon.png) 0 23px;
+}
+[name="serachframe"]{
+	margin-left: 350px;
+	float: left;
+	width: 512px;
+	height:38px;
+	border-radius: 10px 0 0 10px;
+	border:2px solid #c4c7ce;
+	border-right: 0px;
+}
+[name="baidu"]{
+	float: left;
+	height:44px;
+	width:108px;
+	border-radius: 0 10px 10px 0;
+	background-color: #4e6ef2;
+	color: white;
+	border:none;
+	font-weight: 400;
+	box-shadow: none;
+	font-size: 17px;
+}
+
+footer{
+	/*border: 1px solid red;*/
+	position: fixed;
+	height: 40px;
+	background-color: #fbfbfb;
+	text-align: left;
+	line-height: 40px;
+	font: 12px/23px Arial,sans-errif;
+}
+#bottom-left{
+	float: left;
+	/*border:1px solid red;*/
+}
+#bottom-right{
+	float: left;
+	margin-left: 400px;
+	/*border:1px solid red;*/
+}
+a[href="https://iwenjuan.baidu.com/?code=61rwh8"]{
+	text-decoration: underline;
+	font-weight: bold;
+}
