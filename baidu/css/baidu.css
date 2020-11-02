@@ -135,7 +135,7 @@ section{
 	opacity: ;
 	width:24px;
 	height: 20px;
-	background: url(capture_icon.png) 0 47px;
+	background: url(../images/capture_icon.png) 0 47px;
 }
 #search #span1:hover{
 	position: absolute;
@@ -147,7 +147,7 @@ section{
 	opacity: ;
 	width:24px;
 	height: 20px;
-	background: url(capture_icon.png) 0 23px;
+	background: url(../images/capture_icon.png) 0 23px;
 }
 [name="serachframe"]{
 	margin-left: 350px;
