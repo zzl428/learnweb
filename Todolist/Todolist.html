@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="60">
+	<title>Todolist</title>
+	<link rel="stylesheet" type="text/css" href="css/Todolist.css">
+	
+</head>
+<body>
+	<header>
+		<h1 onclick="init()">Todolist</h1>
+	</header>
+	<section>
+		<div id="expirearea">
+			<h4>已过期</h4>
+			<ul id="expirearea-list"></ul>
+		</div>
+		<div id="todoarea">
+			<h4>待办</h4>
+			<ul id="todoarea-list"></ul>
+		</div>
+		<div id="donearea">
+			<h4>已完成</h4>
+			<ul id="donearea-list"></ul>
+		</div>
+		<div id="inputarea">
+			<img src="source/images/addinput_icon.jpg" width="50" id="img">
+			<form id="form">
+				<label>Todolist</label>
+				<input id="time" type="datetime-local" name="time">
+				<input id="input" type="text" name="input" />
+				<button onclick="add()">add</button>
+			</form>
+		</div>
+	</section>
+	<footer>
+		<p id="Copyright">Copyright&copy;2020 Todolist</p>
+		<p id="Powered">&nbsp;Powered by zzl</p>
+	</footer>
+	<script type="text/javascript" src="js/Todolist.js"></script>
+</body>
+</html>

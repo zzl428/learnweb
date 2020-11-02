@@ -1,0 +1,80 @@
+body{
+	width: 50%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+header{
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header h1{
+	cursor:pointer;
+}
+
+
+section{
+	border: 1px solid black;
+}
+section h4{
+	/*border: 1px solid black;*/
+	padding-left: 10px;
+}
+li{
+	/*border: 1px solid black;*/
+	width: 96%;
+	list-style-type: none;
+	display: flex;
+}
+li input{
+	border:none;
+	font-size: 14px;
+	width:auto;	
+}
+li .time_text{
+	width:28%;
+}
+li .content_text{
+	padding-left: 26px;
+}
+li .delete_button{
+	margin-left: auto;
+}
+/*#expirearea{
+	border: 1px solid blue;
+}
+#todoarea{
+	border: 1px solid yellow;
+}
+#donearea{
+	border: 1px solid red;
+}*/
+#inputarea{
+	/*border: 1px solid green;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#form{
+	display: none;
+}
+#inputarea:hover #form{
+	display: block;
+}
+#inputarea:hover #img{
+	float: left;
+	visibility: hidden;
+}
+
+
+
+
+
+footer{
+	border:1px solid black;
+	display: flex;
+	justify-content: center;
+}
