@@ -6,11 +6,16 @@
 	<meta http-equiv="refresh" content="60">
 	<title>Todolist</title>
 	<link rel="stylesheet" type="text/css" href="css/Todolist.css">
-	
+	<script type="text/javascript" src="js/Todolist.js"></script>
 </head>
 <body>
+	<!-- 滚动球 -->
+	<span></span>
 	<header>
-		<h1 onclick="init()">Todolist</h1>
+		<div id="title">
+			<h1 onclick="init()">Todolist</h1>
+			<p>重置ToDoList</p>
+		</div>
 	</header>
 	<section>
 		<div id="expirearea">
@@ -39,6 +44,6 @@
 		<p id="Copyright">Copyright&copy;2020 Todolist</p>
 		<p id="Powered">&nbsp;Powered by zzl</p>
 	</footer>
-	<script type="text/javascript" src="js/Todolist.js"></script>
+	
 </body>
 </html>

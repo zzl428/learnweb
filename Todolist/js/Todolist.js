@@ -1,8 +1,9 @@
-//html的meta里设置了每隔30s刷新一次页面
+//html的meta里设置了每隔60s刷新一次页面
 
-//main()
-load();
-
+window.onload=function(){
+	load();
+	add_dropdown()
+}
 
 //初始化函数
 function init(){
@@ -11,7 +12,34 @@ function init(){
 	if(!window.localStorage){
 		alert("浏览器不支持localstorage");
 	}
+	else{
+		localStorage.setItem("已过期","block");
+		localStorage.setItem("待办","block");
+		localStorage.setItem("已完成","block");
+	}
 	location.reload();
+}
+
+//给三个区域添加收放功能
+function add_dropdown(){
+	var h4=document.getElementsByTagName("h4");
+	for(let i=0;i<h4.length;i++){
+		let key=h4[i].innerText;
+		let display=h4[i].parentNode.lastElementChild.style.display;
+		display=localStorage.getItem(key);
+		h4[i].parentNode.lastElementChild.style.display=display;
+		h4[i].onclick=function(){
+			if(display==="block"){
+				display="none";
+				h4[i].parentNode.lastElementChild.style.display="none";
+			}
+			else{
+				display="block";
+				h4[i].parentNode.lastElementChild.style.display="block";
+			}
+			localStorage.setItem(key,display);
+		}
+	}
 }
 
 //判断事件是否过期
@@ -19,6 +47,9 @@ function judgeExpire(){
 	var now=new Date();
 	for(let i=0;i<localStorage.length;i++){
 		let key=localStorage.key(i);
+		if(key==="已过期"||key==="待办"||key==="已完成"){
+			continue;
+		}
 		let value=JSON.parse(localStorage.getItem(key));
 		let time=Date.parse(value.deadline);
 		let nowtime=now.getTime();
@@ -176,9 +207,13 @@ function load(){
 	ul_array[2].innerHTML="";
 	//判断本地事项是否过期
 	judgeExpire();
+
 	for(let i=0;i<localStorage.length;i++){
 		//获取本地数据
 		let key=localStorage.key(i);
+		if(key==="已过期"||key==="待办"||key==="已完成"){
+			continue;
+		}
 		let value=JSON.parse(localStorage.getItem(key));
 		//新建li节点
 		var new_li=document.createElement("li");
@@ -241,4 +276,5 @@ function load(){
 			sort_insert(todo_ul_node,new_li,value);
 		}
 	}
+	add_dropdown();
 }

@@ -1,27 +1,107 @@
+@keyframes around{
+	0%{
+		transform: translateX(0);
+	}
+	44%{
+    	transform: translateX(663.5px);
+  	}
+  	50%{
+     	transform: translate(663.5px, 65px); 
+  	}
+  	94%{
+    	transform:translate(0,65px);
+  	}
+  	100%{
+    	transform: translateY(0);
+  	}
+}
+
 body{
-	width: 50%;
+	/*border:1px solid red;*/
+	width: 100%;
 	margin-left:auto;
 	margin-right:auto;
+	/*position: relative;*/
+}
+
+span{
+	display: inline-block;
+	position: relative;
+	top: 25px;
+	left: 341.5px;
+	width: 20px;
+ 	height: 20px;
+  	background: orange;
+  	border-radius: 100%;
+  	animation:around;
+  	animation-duration: 59s;
+  	animation-timing-function: linear;
+  	animation-delay: 0.5s;
+  	/*animation-iteration-count:infinite;*/
+}
+span:hover{
+	animation-play-state:paused;
 }
 
 header{
+	width: 50%;
+	margin:0 auto;
 	border: 1px solid black;
+	border-radius: 5px 5px 0 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
-header h1{
+#title{
+	position: relative;
+}
+#title h1{
 	cursor:pointer;
+}
+#title p{
+	display: none;
+	width: 120px;
+	background-color: #f1f1f1;
+	text-align: center;
+	border-radius: 6px;
+	position: absolute;
+	left: 137px;
+	bottom: 15px;
+}
+#title p:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #f1f1f1 transparent transparent;
+}
+#title:hover p{
+	display: block;
 }
 
 
 section{
+	width: 50%;
+	margin:0 auto;
 	border: 1px solid black;
 }
 section h4{
-	/*border: 1px solid black;*/
-	padding-left: 10px;
+	display: block;
+	height: 20px;
+	width: 94%;
+	padding-left: 5px;
+	margin-left: 10px;
+	/*3D*/
+}
+section h4:hover{
+	cursor: pointer;
+	box-shadow: 0 0 2px black;
+	background-image:linear-gradient(to right,white,#f1f1f1);
+
+	text-shadow: 2px 2px 0 #f1f1f1;
 }
 li{
 	/*border: 1px solid black;*/
@@ -43,15 +123,9 @@ li .content_text{
 li .delete_button{
 	margin-left: auto;
 }
-/*#expirearea{
-	border: 1px solid blue;
+.delete_button:hover{
+	box-shadow: 0 0 3px black;
 }
-#todoarea{
-	border: 1px solid yellow;
-}
-#donearea{
-	border: 1px solid red;
-}*/
 #inputarea{
 	/*border: 1px solid green;*/
 	display: flex;
@@ -70,11 +144,12 @@ li .delete_button{
 }
 
 
-
-
-
 footer{
+	width: 50%;
+	margin:0 auto;
 	border:1px solid black;
+	border-radius: 0 0 5px 5px;
 	display: flex;
 	justify-content: center;
 }
+
